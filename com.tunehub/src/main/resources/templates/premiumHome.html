@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PremiumHome</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+	crossorigin="anonymous">
+</head>
+<style>
+
+
+.full {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-color: black;
+}
+
+.container-fluid {
+	height: auto;
+}
+
+.name {
+	position: relative;
+	background-color: orange;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 25px;
+	font-weight: bolder;
+	color: white;
+}
+
+tr {
+	height: 60px;
+}
+
+th {
+	height: 70px;
+}
+
+.profile {
+	padding-top: 10px;
+	font-family: sans-serif;
+	font-weight: bolder;
+	color: white;
+	text-align: left;
+	border: 2px solid gray;
+}
+
+.song {
+	border: 2px solid;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.playlist {
+	border: 2px solid;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.song:hover {
+	border: 2px solid white;
+	color: #fff;
+}
+
+.playlist:hover {
+	border: 2px solid white;
+	color: #fff;
+}
+
+th {
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	padding: 5px;
+}
+
+.albums {
+	color: white;
+	font-family: sans-serif;
+	border-right: 2px solid gray;
+	border-left: 1px solid gray;
+	
+}
+
+.albums tr {
+	text-align: left;
+	font-size: 15px;
+	border: 1px solid gray;
+}
+
+td {
+	padding: 8px;
+}
+
+li {
+	list-style-type: none;
+}
+
+.allsongs tr {
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.lout {
+	position: relative;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 18px;
+	font-weight: bolder;
+	color: black !important;
+	float: right;
+	padding-right: 5px;
+}
+
+
+.secondcol {
+	color: orange;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+.songcard {
+	text-align: center;
+	color: orange;
+	font-size: 18px;
+	font-weight: bolder;
+}
+
+.mainrow {
+	background-color: black;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul a {
+	color: white;
+}
+
+img {
+	height: 50px;
+	width: 50px;
+	border: 3px solid white;
+	border-radius: 25px;	
+}
+
+img:hover
+{
+border: 2px solid orange;
+}
+
+.albums1 td:nth-child(n+3) {
+	display: none;
+}
+
+.secondcol {
+	background-color: black;
+	color: #fff;
+	
+}
+
+.songcard1 {
+	height: 500px;
+	width: 400px;
+	margin-top: 50px;
+	justify-content: center;
+	background-color: black;
+	margin-left: 200px;
+	border-radius: 15px;
+	border:4px solid orange;
+}
+
+.songcard1:hover
+{
+border: 4px solid orange;
+}
+
+.audicontrols {
+	height: 150px;
+	width: 400px;
+	background-color: orange;
+	margin-left: 200px;
+	text-align: center;
+}
+.album
+{
+ padding-top:15px;                                          
+}
+#song-list-container li {
+	box-shadow: 0 3px 8px white;
+	height: 60px;
+	padding: 15px;
+}
+
+#song-list-container {
+	margin-top: 40px;
+}
+
+.songcard img {
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	margin: 5% 0;
+	object-fit: cover;
+	padding: 0;
+	border: 2px solid white;
+}
+
+.songcard .content {
+	height: 20%;
+}
+
+.songcard  .content li {
+	color: white;
+	font-weight: bold;
+	list-style-type: none;
+	text-align: center;
+}
+.songcard .content li:first-child{
+font-size: 25px;
+
+}
+.songcard .audio{
+height:30%;
+padding-top: 30px;
+
+}
+audio::-webkit-media-controls-panel {
+  background-color: orange; /* Change to your desired color */
+
+}
+audio::-webkit-media-controls-play-button {
+  background-color: white; 
+  border-radius: 50%;
+  
+}
+audio{
+background-color: orange;
+ border-radius: 15px;
+}
+.allsongs
+{
+top:60px;
+}
+.name{
+	top: 0;
+	left :0;
+	justify-content: center;
+	width:100%;
+	height:40px;
+	z-index:80;
+}
+</style>
+<body>
+	<div class="name">
+		TuneHub<span class="lout"><a href="logout">Logout</a></span>
+
+	</div>
+	
+	<div class="container-fluid full">
+
+		<div class="row mainrow">
+			<div class="col-md-3 colm1">
+
+				<div class="row profile">
+					<ul>
+						<li>Profile</li>
+						<br>
+						<li>Search</li>
+					</ul>
+				</div>
+				<div class="row albums">
+					<table>
+						<thead>
+							<tr>
+								<th>Albums</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="albums1" th:each="playlist:${playlists}">
+<!-- 								<td  th:if ="${not #lists.isEmpty(playlist.songs)}" ><audio th:src="${playlist.songs[0].image}"></audio> </td> -->
+
+								<td th:text="${playlist.name}" class="playlist-button"
+								th:data-id="${playlist.id}"></td>							
+<!-- 							th:onclick="`showPlaylist(${.name})`"></td> -->
+									
+								<td class="playlistimg" th:each="song:${playlist.songs}"><img
+									alt="Image Not found" th:src="${song.image}" /></td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+			
+			
+			
+					<div class="col-md-6 secondcol">
+				<div class="row songcard1">
+					<div class="row songcard justify-content-center">
+						<img alt="Not found"
+							src="https://github.com/durgasaipetla/Images/blob/main/Thiru.png?raw=true" />
+						<div class="content">
+							<ul>
+								<li>Name</li>
+								<li>Artist</li>
+								<li>Genre</li>
+							</ul>
+						</div>
+						<div class="audio">
+				<audio controls src="https://github.com/durgasaipetla/audiofiles/raw/main/Animal-Jamal-Kudu.mp3"></audio>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="song-list-container">Songs</div>
+				
+			</div>
+			
+			
+			
+			<div class="col-md-3 allsongs">
+				<div class="row albums" id="allsongs">
+					<table>
+						<thead>
+							<tr>
+								<th>All songs</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="song:${songs}">
+								<td><img alt="No image found" th:src="${song.image}" /></td>
+								<td class="highlight" th:text="${song.name}"
+									th:song-name="${song.name}" 
+									th:song-artist="${song.artist}" 
+									th:song-genre="${song.genre}" 
+									th:song-image="${song.image}" 
+									th:song-link="${song.link}" 
+									></td>
+							</tr>
+							
+						
+							
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+<!--  	<script th:inline="javascript">   -->
+	<!--	function showPlaylist(name) {
+			
+//  			document.getElementById("albums1").innerText = name;	
+//  	}
+<!-- 	</script>   -->
+
+
+<!--  -->
+
+
+
+	<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const playlistButtons = document.querySelectorAll(".playlist-button");
+            const songListContainer = document.getElementById("song-list-container");
+         	var setSongs = {};
+        		  playlistButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const id = parseInt(button.getAttribute("data-id"));
+                    fetch(`/playlist/${id}`)
+                        .then(response => response.json())
+                        .then(songs => {
+                        	setSongs = songs;
+                            songListContainer.innerHTML = '';
+                            const songList = document.createElement('ul');
+                            songs.forEach(song => {
+                                const listItem = document.createElement('li');
+                                
+                                listItem.textContent = song.name+" ( "+song.artist+ " )";
+                                listItem.setAttribute("song-name", song.name);
+                                listItem.setAttribute("song-genre", song.genre);
+                                listItem.setAttribute("song-link", song.link);
+                                listItem.setAttribute("song-image", song.image);
+                                listItem.setAttribute("song-artist", song.artist);
+                                songList.appendChild(listItem);
+                            });
+                            songListContainer.appendChild(songList);
+                            const listItems = document.querySelectorAll('#song-list-container li');
+                            
+                            listItems.forEach(function(item) {
+                                item.classList.add('highlight'); // Add the class name 'highlight'
+                            });
+                        });
+                });
+            }); 
+                 
+                      })
+	  					
+			 // Get elements with the class name 'exampleClass'
+			var handleClick =(event) =>{
+		    // Check if the clicked element has the class 'exampleClass'
+		    if (event.target.classList.contains("highlight")) {
+		        // Get the value of the data-example attribute
+		        var name = event.target.getAttribute("song-name");
+		        var artist = event.target.getAttribute("song-artist");
+		        var genre = event.target.getAttribute("song-genre");
+		        var link = event.target.getAttribute("song-link");
+		        var image = event.target.getAttribute("song-image");
+		      //  var dataObject = JSON.parse(dataExampleValue);
+		        // Print the value
+		        
+		        console.log(name);
+		        var parentElement = document.querySelector(".content ul");
+		        var firstChild = parentElement.children[0];
+		        var secondChild = parentElement.children[1];
+		        var thirdChild = parentElement.children[2];
+		        firstChild.textContent = name;
+		        secondChild.textContent = artist;
+		        thirdChild.textContent = genre;
+		        
+                var img= document.querySelector(".songcard img");
+                img.setAttribute("src",image);
+                
+                var aud= document.querySelector(".songcard audio");
+                aud.setAttribute("src",link);
+		    }
+		}
+		
+		// Add click event listener to the container
+		var element =document.getElementById("song-list-container");
+		var allsongs =document.getElementById("allsongs");
+		
+		element.addEventListener("click", handleClick);
+		allsongs.addEventListener("click", handleClick);		
+		
+    </script>
+
+		
+</body>
+
+</html>
+ 
+
